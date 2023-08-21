@@ -81,11 +81,20 @@ PODS:
   - GoogleUtilities/Reachability (7.11.5):
     - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (3.1.1)
+  - libphonenumber_plugin (0.0.1):
+    - Flutter
+    - PhoneNumberKit
   - path_provider_foundation (0.0.1):
     - Flutter
     - FlutterMacOS
   - permission_handler_apple (9.1.1):
     - Flutter
+  - PhoneNumberKit (3.6.7):
+    - PhoneNumberKit/PhoneNumberKitCore (= 3.6.7)
+    - PhoneNumberKit/UIKit (= 3.6.7)
+  - PhoneNumberKit/PhoneNumberKitCore (3.6.7)
+  - PhoneNumberKit/UIKit (3.6.7):
+    - PhoneNumberKit/PhoneNumberKitCore
   - PromisesObjC (2.3.1)
   - SDWebImage (5.17.0):
     - SDWebImage/Core (= 5.17.0)
@@ -118,6 +127,7 @@ DEPENDENCIES:
   - firebase_core (from `.symlinks/plugins/firebase_core/ios`)
   - Flutter (from `Flutter`)
   - flutter_logs (from `.symlinks/plugins/flutter_logs/ios`)
+  - libphonenumber_plugin (from `.symlinks/plugins/libphonenumber_plugin/ios`)
   - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
   - permission_handler_apple (from `.symlinks/plugins/permission_handler_apple/ios`)
   - smart_auth (from `.symlinks/plugins/smart_auth/ios`)
@@ -140,6 +150,7 @@ SPEC REPOS:
     - FMDB
     - GoogleUtilities
     - GTMSessionFetcher
+    - PhoneNumberKit
     - PromisesObjC
     - SDWebImage
     - SwiftyGif
@@ -158,6 +169,8 @@ EXTERNAL SOURCES:
     :path: Flutter
   flutter_logs:
     :path: ".symlinks/plugins/flutter_logs/ios"
+  libphonenumber_plugin:
+    :path: ".symlinks/plugins/libphonenumber_plugin/ios"
   path_provider_foundation:
     :path: ".symlinks/plugins/path_provider_foundation/darwin"
   permission_handler_apple:
@@ -193,8 +206,10 @@ SPEC CHECKSUMS:
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   GoogleUtilities: 13e2c67ede716b8741c7989e26893d151b2b2084
   GTMSessionFetcher: e8647203b65cee28c5f73d0f473d096653945e72
+  libphonenumber_plugin: e8a7d64a6624a7c25f2c4ab0b7ead2a8e341e35e
   path_provider_foundation: 29f094ae23ebbca9d3d0cec13889cd9060c0e943
   permission_handler_apple: e76247795d700c14ea09e3a2d8855d41ee80a2e6
+  PhoneNumberKit: 43b5169526cc417398c8f13f77c97552c1c6ed76
   PromisesObjC: c50d2056b5253dadbd6c2bea79b0674bd5a52fa4
   SDWebImage: 750adf017a315a280c60fde706ab1e552a3ae4e9
   smart_auth: 4bedbc118723912d0e45a07e8ab34039c19e04f2
