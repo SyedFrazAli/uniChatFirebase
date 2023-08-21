@@ -7,7 +7,7 @@ import 'package:zego_zimkit/zego_zimkit.dart';
 class ProfileSetupScreen extends StatefulWidget {
   final String phoneNumber;
 
- const ProfileSetupScreen({required this.phoneNumber, Key? key})
+  const ProfileSetupScreen({required this.phoneNumber, Key? key})
       : super(key: key);
   @override
   State<ProfileSetupScreen> createState() => _ProfileSetupScreenState();
@@ -20,6 +20,7 @@ class _ProfileSetupScreenState extends State<ProfileSetupScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.deepPurple,
         title: const Text('Profile Setup'),
       ),
       body: Container(
@@ -45,6 +46,12 @@ class _ProfileSetupScreenState extends State<ProfileSetupScreen> {
                 Navigator.of(context).push(
                     MaterialPageRoute(builder: (_) => const HomeScreen()));
               },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.deepPurple,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
               child: const Text('Register'),
             ),
           ],
@@ -53,4 +60,3 @@ class _ProfileSetupScreenState extends State<ProfileSetupScreen> {
     );
   }
 }
-
