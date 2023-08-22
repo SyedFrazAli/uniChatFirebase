@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:unichat/userinfo.dart';
 import 'package:zego_zimkit/zego_zimkit.dart';
 
 class ChatPopupOption extends StatefulWidget {
@@ -36,7 +37,7 @@ class _ChatPopupOptionState extends State<ChatPopupOption> {
           PopupMenuItem(
             value: 'New Group',
             child: const ListTile(
-              leading: Icon(CupertinoIcons.chat_bubble_2_fill,color: Colors.deepPurple,),
+              leading: Icon(CupertinoIcons.person_2_fill,color: Colors.deepPurple,),
               title: Text(
                 "New Group",
                 maxLines: 1,
@@ -49,7 +50,7 @@ class _ChatPopupOptionState extends State<ChatPopupOption> {
           PopupMenuItem(
             value: 'Join Group',
             child: const ListTile(
-              leading: Icon(CupertinoIcons.chat_bubble_2_fill,color: Colors.deepPurple,),
+              leading: Icon(CupertinoIcons.person_3_fill,color: Colors.deepPurple,),
               title: Text(
                 "Join Group",
                 maxLines: 1,
@@ -59,6 +60,22 @@ class _ChatPopupOptionState extends State<ChatPopupOption> {
               ZIMKit().showDefaultJoinGroupDialog(context);
             },
           ),
+             PopupMenuItem(
+            value: 'See Profile',
+            child: const ListTile(
+              leading: Icon(CupertinoIcons.person_fill,color: Colors.deepPurple,),
+              title: Text(
+                "See Profile",
+                maxLines: 1,
+              ),
+            ),
+            onTap: () {
+               Navigator.of(context).push(
+                  MaterialPageRoute(builder: (_) => UserInfoScreen()),
+                );
+            },
+          ),
+       
         ];
       },
     );

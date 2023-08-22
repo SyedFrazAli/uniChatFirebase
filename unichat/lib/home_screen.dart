@@ -1,5 +1,3 @@
-// ignore_for_file: use_build_context_synchronously
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:unichat/phone.dart';
@@ -40,7 +38,26 @@ class _HomeScreenState extends State<HomeScreen> {
         actions: const [ChatPopupOption()],
         backgroundColor: Colors.deepPurple,
         elevation: 0,
-        title: const Text("chat"),
+        title: Row(
+          children: [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(8.0),
+              child:
+                Image.asset(
+                  'assets/icon/icon1.png', // Adjust the path as needed
+                  width: 30,
+                  height: 30,
+                ),
+            ),
+                SizedBox(
+                  width: 10,
+                ),
+                const Text("UNI-Chat App"),
+              
+            
+          ],
+        ),
+        automaticallyImplyLeading: false,
       ),
       body: Column(
         children: [
@@ -56,7 +73,6 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
-
 
   Widget _chatListSection() {
     return Expanded(

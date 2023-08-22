@@ -3,9 +3,13 @@
 #
 
 list(APPEND FLUTTER_PLUGIN_LIST
+  audioplayers_windows
+  awesome_notifications
+  file_selector_windows
   firebase_core
   permission_handler_windows
   smart_auth
+  zego_express_engine
   zego_zim
 )
 
